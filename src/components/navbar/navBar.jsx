@@ -37,8 +37,7 @@ export default function NavBar({navItems}) {
             <nav className={showNavBar ? 'navbar' : 'hidden'}>
                 <ul  id="Ul-1">
                     <div className="nav-logo">
-                        <img id="img-right" src="https://ik.imagekit.io/methuselah/Mini/Link.png?updatedAt=1709999273863" alt="logo"
-                             width={128.55} height={90.89}/>
+                        <img id="img-right" src="https://ik.imagekit.io/methuselah/Mini/icons/Component%203.svg?updatedAt=1710942935127" alt="logo"/>
                     </div>
                     <div className="nav-div" id="first-list">
                         {navItems.map((navItem) => {

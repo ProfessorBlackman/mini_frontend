@@ -7,13 +7,16 @@
     top: 0;
     left: 70px;
     padding: 10px 0;
-  z-index: 1000;
+    z-index: 1000;
 }
 
-#Ul-1{
+#Ul-1 {
     list-style: none;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    margin: 0;
 }
 
 .Nav-Item {
@@ -47,5 +50,16 @@
 }
 
 .navbar.hidden {
-  display: none;
+    display: none;
+}
+
+#img-right {
+    width: 3.2em;
+    height: 3.2em;
+    margin-left: 1em;
+}
+#img-right:hover {
+    cursor: pointer;
+    border: solid 2px var(--text-color-focus);
+    border-radius: 5px;
 }
