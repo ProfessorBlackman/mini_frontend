@@ -1,0 +1,15 @@
+.Icon-BG{
+    width: 80px;
+    height: 77px;
+    background-color: var(--general-color-1);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+.Icon-Img{
+    width: 51px;
+    height: 45px;
+    padding: 0;
+}

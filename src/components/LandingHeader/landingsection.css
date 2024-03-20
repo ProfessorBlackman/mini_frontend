@@ -1,0 +1,65 @@
+.Header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10em;
+}
+
+.Left-Div {
+    width: 50%;
+    text-align: left;
+    height: 50em;
+    padding-left: 1em;
+}
+
+.Right-Div {
+    width: 30%;
+    margin-right: 2em;
+    height: 50em;
+}
+
+.Heading {
+    color: var(--text-color-1);
+    font-size: 64px;
+}
+
+#red-heading {
+    color: var(--text-color-focus);
+}
+
+.Body-Text {
+    color: var(--text-color-1);
+    font-size: 24px;
+    line-height: 1.5em;
+}
+
+#your-audience {
+    margin-top: -20px;
+    text-decoration-line: underline;
+}
+
+.Get-Started_Btn {
+    margin-left: 60px;
+    margin-top: 70px;
+    width: 483px;
+    height: 93px;
+    border-radius: 20px;
+    font-size: 36px;
+    font-weight: bold;
+    background-color: var(--button-color-1);
+
+}
+
+.Get-Started_Btn:hover {
+    border-radius: 20px;
+    font-size: 36px;
+    font-weight: bold;
+    background-color: var(--button-color-2);
+}
+
+.Get-Started_Btn:active {
+    border: solid var(--button-color-1);
+}
+.Image {
+    width: 551px;
+    height: 586px;
+}

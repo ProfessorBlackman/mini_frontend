@@ -1,0 +1,20 @@
+.Landing-Container {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    width: 110rem;
+    height: 300%;
+    overflow-x: hidden;
+}
+
+.Section {
+    scroll-snap-align: start;
+    border: solid var(--general-color-3); /* TODO: remove later */
+}
+
+.Big-Red-Title {
+    align-self: center;
+    justify-self: center;
+    font-size: 64px;
+    font-weight: bold;
+    color: var(--text-color-focus);
+}

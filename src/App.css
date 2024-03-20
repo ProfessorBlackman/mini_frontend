@@ -1,0 +1,9 @@
+#root {
+  margin: 0 auto;
+  padding: 4rem;
+}
+.App-Head{
+  width: inherit;
+  padding-bottom: 90px;
+
+}
