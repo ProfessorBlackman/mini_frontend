@@ -2,6 +2,7 @@
     display: flex;
     justify-content: space-between;
     flex-direction: column;
+    height: 90vh;
 }
 
 .corner-1 {
@@ -21,4 +22,30 @@
 #know-more-link {
     color: var(--text-color-focus);
     text-decoration-line: underline;
+}
+
+@media screen and (max-width: 768px) {
+    .Features {
+        height: fit-content;
+    }
+
+    .features1 {
+        display: block;
+        padding: 1px;
+        margin: 30px;
+    }
+
+    .features2 {
+        display: none;
+    }
+
+    .corner-1 {
+        flex-direction: column;
+        width: inherit;
+    }
+
+    .know-more {
+        margin-top: 1em;
+        font-size: 15px;
+    }
 }

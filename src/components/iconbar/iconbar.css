@@ -25,3 +25,30 @@
     font-size: 24px;
     font-weight: normal;
 }
+
+@media screen and (max-width: 768px) {
+    .feature-title {
+        font-size: 24px;
+        margin-left: 1em;
+    }
+
+    .description {
+        font-size: 14px;
+        width: 80%;
+        height: 60%;
+    }
+    .title-div{
+        width: 280px;
+        height: fit-content;
+        justify-content: flex-start;
+    }
+    .iconbar{
+        height: 15em;
+        width: inherit;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 1em;
+
+    }
+}

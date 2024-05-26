@@ -1,18 +1,25 @@
 .navbar {
-    height: 3em;
+    height: 4em;
     width: 92vw;
     background-color: var(--background-color-1);
-    border: solid var(--general-color-3);
     position: fixed;
     top: 0;
     left: 70px;
     padding: 10px 0;
     z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-#Ul-1 {
+.menu-icon {
+    display: none; /* Hide the menu icon by default */
+}
+
+.vertical-menu {
     list-style: none;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     padding: 0;
@@ -24,13 +31,24 @@
     text-decoration: none;
     font-weight: normal;
     font-size: large;
+}
 
-
+.nav-items {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
 .nav-pages {
-    margin-left: 1em;
-    margin-right: 1em;
+    margin: 0;
+    padding: 10px;
+}
+
+.nav-pages-vertical {
+    margin-top: 1px;
+    margin-bottom: 1px;
 }
 
 .Nav-Item:hover {
@@ -58,8 +76,68 @@
     height: 3.2em;
     margin-left: 1em;
 }
+
 #img-right:hover {
     cursor: pointer;
     border: solid 2px var(--text-color-focus);
     border-radius: 5px;
+}
+
+.show-expanded {
+    background-color: var(--background-color-1);
+    position: fixed;
+    top: 0;
+    left: 70px;
+    padding: 10px 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+/* Media query for mobile screens */
+@media screen and (max-width: 768px) {
+    .navbar {
+        width: 100%;
+        padding-bottom: 1em;
+        left: 0;
+    }
+
+
+    .menu-icon {
+        display: inline; /* Show the menu icon on mobile screens */
+        /* Add a click effect on the menu icon */
+        cursor: pointer;
+        margin-right: 1em;
+        margin-top: 0.5em;
+        margin-bottom: 1em;
+        width: 2em;
+        height: 2em;
+
+    }
+
+    .nav-items {
+        display: none; /* Hide the menu items by default on mobile screens */
+    }
+
+    .nav-items.show {
+        display: flex; /* Show the menu items when the menu icon is clicked */
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding: 0;
+        margin: 0;
+        height: 18em;
+        width: 10em;
+    }
+
+    .nav-items-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding: 0;
+        margin: 0;
+    }
 }

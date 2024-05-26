@@ -1,32 +1,38 @@
-.FAQS{
+.FAQS {
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 100vh;
     margin-top: 10em;
+    padding-top: 10em;
 }
-.accordion-item{
+
+.accordion-item {
     font-size: 24px;
     color: var(--general-color-3);
     padding: 1em;
     width: 60vw;
     text-align: left;
 }
-.faq-title{
+
+.faq-title {
     display: flex;
     border-bottom: gray solid 1px;
     margin-bottom: 1em;
     height: 2em;
     color: var(--general-color-3);
 }
-.faq-title:hover{
+
+.faq-title:hover {
     cursor: pointer;
 }
-.faq-title:active{
+
+.faq-title:active {
     border-bottom: gray solid 1px;
     color: var(--text-color-focus);
 }
-.accordion-item-header{
+
+.accordion-item-header {
     align-self: end;
     padding-left: 5px;
     margin-left: 50px;
@@ -34,11 +40,64 @@
     margin-bottom: 5px;
     padding-bottom: 5px;
 }
-.sign{
+
+.sign {
     font-size: 40px;
 }
-.accordion-item-content{
+
+.accordion-item-content {
     width: 737px;
     height: 145px;
     color: var(--text-color-1);
+    padding-left: 5em;
+}
+
+.Big-FAQ-Title {
+    align-self: center;
+    justify-self: center;
+    font-size: 64px;
+    font-weight: bold;
+    color: var(--text-color-focus);
+}
+
+@media screen and (max-width: 768px) {
+    .accordion-item {
+        width: 90vw;
+        font-size: 20px;
+    }
+
+    .FAQS {
+        height: fit-content;
+        margin-top: 2em;
+        padding-top: 2em;
+    }
+
+    .Big-FAQ-Title {
+        text-align: center;
+        font-size: 32px;
+    }
+
+    .faq-title {
+        margin-bottom: 0.5em;
+        padding-bottom: 0.5em;
+        width: fit-content;
+    }
+    .accordion-item-header{
+        margin-left: 0;
+        height: 1em;
+        margin-bottom: 5px;
+        padding-bottom: 5px;
+        padding-left: 0;
+    }
+    .accordion-item-content{
+        padding-left: 0;
+        width: fit-content;
+        height: fit-content;
+        font-size: 15px;
+    }
+    .sign{
+        font-size: 20px;
+        padding-left: 0;
+        padding-right: 9px;
+    }
 }

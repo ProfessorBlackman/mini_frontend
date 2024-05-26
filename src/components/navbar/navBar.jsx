@@ -1,31 +1,13 @@
+import {useState} from "react";
 import {Link} from "react-router-dom";
-import {useEffect, useState} from "react";
-
 import PropTypes from "prop-types";
-
-import './navBar.css'
+import "./navBar.css";
+import {GiHamburgerMenu} from "react-icons/gi";
+import {CgCloseR} from "react-icons/cg";
 
 export default function NavBar({navItems}) {
-
-    const [activeItem, setActiveItem] = useState('')
-    const [showNavBar, setShowNavBar] = useState(true);
-
-    useEffect(() => {
-        let prevScrollPos = window.scrollY;
-
-        const handleScroll = () => {
-            const currentScrollPos = window.scrollY;
-            const isVisible = prevScrollPos > currentScrollPos || currentScrollPos < 50;
-            setShowNavBar(isVisible);
-            prevScrollPos = currentScrollPos;
-        };
-
-        window.addEventListener('scroll', handleScroll);
-
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
+    const [activeItem, setActiveItem] = useState("");
+    const [showMenu, setShowMenu] = useState(false);
 
     const handleClick = (item) => {
         setActiveItem(item);
@@ -33,30 +15,44 @@ export default function NavBar({navItems}) {
 
     return (
         <div>
-            {/* <>{children}</> */}
-            <nav className={showNavBar ? 'navbar' : 'hidden'}>
-                <ul  id="Ul-1">
-                    <div className="nav-logo">
-                        <img id="img-right" src="https://ik.imagekit.io/methuselah/Mini/icons/Component%203.svg?updatedAt=1710942935127" alt="logo"/>
-                    </div>
-                    <div className="nav-div" id="first-list">
+            <nav className={showMenu ? "open-navbar" : "navbar"}>
+                {!showMenu ? <div className="nav-logo">
+                    <img
+                        id="img-right"
+                        src="https://ik.imagekit.io/methuselah/Mini/icons/Component%203.svg?updatedAt=1710942935127"
+                        alt="logo"
+                    />
+                </div> : <div></div>}
+                <div className="nav-items-container">
+                    <button className="menu-icon" onClick={() => setShowMenu(!showMenu)}>
+                        {!showMenu ? <GiHamburgerMenu size={40}/> : <CgCloseR size={40}/>}
+                    </button>
+                    <ul className={`nav-items ${showMenu ? "show" : ""}`}>
                         {navItems.map((navItem) => {
                             return (
-                                <li key={navItem.id} onClick={() => handleClick(navItem.name)} className="nav-pages">
-                                    <Link to={navItem.route}
-                                          className={` Nav-Item ${activeItem === navItem.name ? 'Nav-Item-1' : ''}`}>
+                                <li
+                                    key={navItem.id}
+                                    onClick={() => handleClick(navItem.name)}
+                                    className="nav-pages"
+                                >
+                                    <Link
+                                        to={navItem.route}
+                                        className={` Nav-Item ${
+                                            activeItem === navItem.name ? "Nav-Item-1" : ""
+                                        }`}
+                                    >
                                         {navItem.name}
                                     </Link>
                                 </li>
                             );
                         })}
-                    </div>
-                </ul>
+                    </ul>
+                </div>
             </nav>
         </div>
     );
 }
 
 NavBar.propTypes = {
-    navItems: PropTypes.node.isRequired
-}
+    navItems: PropTypes.array.isRequired,
+};

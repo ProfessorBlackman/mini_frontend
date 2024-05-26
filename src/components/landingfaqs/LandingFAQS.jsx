@@ -37,7 +37,7 @@ export function LandingFAQS() {
 
     return (
         <section className="Section FAQS">
-            <h1 className="Big-Red-Title">Frequently asked questions</h1>
+            <h1 className="Big-FAQ-Title p-5">Frequently asked questions</h1>
             {faqs.map((item, ) => (
                 <div key={item.id} className="accordion-item">
                     <div className="faq-title" onClick={() => handleClick(item.id)}>

@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
     --primary-color: #000000;
     --background-color-1: #BFD7EA;
@@ -9,6 +13,7 @@
     --general-color-2: #BFD7EA;
     --general-color-3: #0d0452;
     --button-color-1: #191D32;
+    --button-color-3: #BFD7EA;
     --button-color-2: #7E0909;
 
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;

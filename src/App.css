@@ -1,9 +1,22 @@
 #root {
-  margin: 0 auto;
-  padding: 4rem;
+    margin: 0 auto;
 }
-.App-Head{
-  width: inherit;
-  padding-bottom: 90px;
+
+.App-Head {
+    width: 100%;
+    padding-bottom: 50px;
+
+}
+
+@media screen and (max-width: 768px) {
+    .AppLayout {
+        width: 100vw;
+    }
+
+    .App-Head {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+    }
 
 }

@@ -1,0 +1,51 @@
+.Landing-Container {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    width: 110rem;
+    height: 300%;
+    overflow-x: hidden;
+}
+
+.Section {
+    scroll-snap-align: start;
+}
+
+.Big-Red-Title {
+    align-self: center;
+    justify-self: center;
+    font-size: 64px;
+    font-weight: bold;
+    color: var(--text-color-focus);
+}
+
+.features1 {
+    display: none;
+}
+
+.features2 {
+    display: block;
+}
+
+/* Media query for mobile screens */
+@media screen and (max-width: 768px) {
+    .Landing-Container {
+        scroll-snap-type: y mandatory;
+        overflow-y: scroll;
+        width: 100%;
+        height: 300%;
+        overflow-x: hidden;
+    }
+
+    .Section {
+        scroll-snap-align: start;
+        height: fit-content;
+    }
+
+    .Big-Red-Title {
+        align-self: center;
+        justify-self: center;
+        font-size: 32px;
+        font-weight: bold;
+        color: var(--text-color-focus);
+    }
+}
